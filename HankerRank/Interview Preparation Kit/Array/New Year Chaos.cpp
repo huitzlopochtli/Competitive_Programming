@@ -4,6 +4,7 @@ void checkMin(int *arr, int t)
 {
 
 }
+
 int main()
 {
     int t;
@@ -13,6 +14,7 @@ int main()
 
     while(t>0)
     {
+        --t;
         int t1;
         std::cin >> t1;
         int arr[t1];
@@ -40,9 +42,10 @@ int main()
             }
         }
 
-        std::cout<<count<<std::endl;
+        if(!choatic)
+            std::cout<<count<<std::endl;
 
-        --t;
+
     }
 }
 
