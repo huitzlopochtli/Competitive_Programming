@@ -6,20 +6,51 @@ void printArray(int arr[], int n)
         std::cout << arr[i] <<" ";
 }
 
-void bubbleSort(int arr[], int n)
+int partition(int a[],int l,int u)
 {
-    if (n == 1)
-        return;
+    int v,i,j,temp;
+    v=a[l];
+    i=l;
+    j=u+1;
 
-    for (int i=0; i<n-1; i++)
-        if (arr[i] > arr[i+1])
+    do
+    {
+        do
+            i++;
+
+        while(a[i]<v&&i<=u);
+
+        do
+            j--;
+        while(v<a[j]);
+
+        if(i<j)
         {
-            int temp = arr[i];
-            arr[i] = arr[i+1];
-            arr[i+1] = temp;
+            temp=a[i];
+            a[i]=a[j];
+            a[j]=temp;
         }
-    bubbleSort(arr, n-1);
+    }while(i<j);
+
+    a[l]=a[j];
+    a[j]=v;
+
+    return(j);
 }
+
+
+void quick_sort(int a[],int l,int u)
+{
+    int j;
+    if(l<u)
+    {
+        j=partition(a,l,u);
+        quick_sort(a,l,j-1);
+        quick_sort(a,j+1,u);
+    }
+}
+
+
 
 int main()
 {
@@ -34,7 +65,7 @@ int main()
         arrCopy[i] = arr[i];
     }
 
-    bubbleSort(arrCopy, length);
+    quick_sort(arrCopy,0, length-1);
 
     int minSwap = 0;
 
