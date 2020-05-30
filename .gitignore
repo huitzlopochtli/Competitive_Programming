@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# C++
+*
+!/**/
+!*.*
+*.dSYM
+
+# VSCODE
+.vscode/*
+*tasks.json
