@@ -40,3 +40,41 @@
 # VSCODE
 .vscode/*
 *tasks.json
+
+#Visual Studio
+# User-specific files
+*/*.suo
+*/*.user
+*/*.userosscache
+*/*.sln.docstates
+*/*.sln
+
+*dll
+*pdb
+*.json
+*.cache
+*.props
+*.targets
+*Assembly*
+*Absolute*
+*.DS_Store*
+*tmp*
+*CopyComplete*
+
+
+# Build results
+*/*[Dd]ebug/
+*/*[Dd]ebugPublic/
+*/*[Rr]elease/
+*/*[Rr]eleases/
+*/*x64/
+*/*x86/
+*/*build/
+*/*bld/
+*/*[Bb]in/
+*/*[Oo]bj/
+*/*[Oo]ut/
+*/*msbuild.log
+*/*msbuild.err
+*/*msbuild.wrn
+*/*.vs*
