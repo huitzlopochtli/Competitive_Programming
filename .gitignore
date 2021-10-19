@@ -36,6 +36,7 @@
 !/**/
 !*.*
 *.dSYM
+*.exe
 
 # VSCODE
 .vscode/*
